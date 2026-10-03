@@ -1,0 +1,13 @@
+services:
+  spriteloom:
+    image: ghcr.io/therebelrobot/spriteloom:latest
+    container_name: spriteloom
+    restart: unless-stopped
+    ports:
+      - "8740:8740"
+    volumes:
+      - ./data:/app/data
+    environment:
+      # Optional. Leave unset if your reverse proxy already handles sign-in.
+      # SPRITELOOM_BASIC_AUTH: "username:password"
+      PORT: "8740"

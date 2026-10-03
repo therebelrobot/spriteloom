@@ -1,0 +1,15 @@
+{
+  "name": "spriteloom",
+  "short_name": "spriteloom",
+  "description": "Line up, time and export sprite animations drawn in Procreate.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1e2632",
+  "theme_color": "#1e2632",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "spriteloom",
+  "version": "0.1.0",
+  "description": "Self-hosted sprite animation workbench: bring frames from Procreate, align them, time them, preview them, export spritesheets.",
+  "private": true,
+  "license": "Unlicense",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx scripts/build.ts --watch",
+    "build": "tsx scripts/build.ts",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "tsx --test test/*.test.ts",
+    "docker:build": "docker build -t ghcr.io/therebelrobot/spriteloom:local .",
+    "docker:run": "docker run --rm -p 8740:8740 -v $(pwd)/data:/app/data ghcr.io/therebelrobot/spriteloom:local",
+    "docker:push": "docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/therebelrobot/spriteloom:latest --push .",
+    "release:patch": "npm version patch -m \"chore: release v%s\" && git push && git push --tags",
+    "release:minor": "npm version minor -m \"chore: release v%s\" && git push && git push --tags",
+    "release:major": "npm version major -m \"chore: release v%s\" && git push && git push --tags",
+    "release:tags": "git tag --sort=-v:refname | grep '^v'"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
