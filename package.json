@@ -1,6 +1,6 @@
 {
   "name": "spriteloom",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Self-hosted sprite animation workbench: bring frames from Procreate, align them, time them, preview them, export spritesheets.",
   "private": true,
   "license": "Unlicense",
