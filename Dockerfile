@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:26-alpine AS build
+FROM node:26.12.1-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund
@@ -10,7 +10,7 @@ COPY static ./static
 RUN npm run build
 
 # The bundle has no runtime dependencies, so the final image is just Node + dist.
-FROM node:26-alpine
+FROM node:26.12.1-alpine
 ENV NODE_ENV=production \
     PORT=8740 \
     SPRITELOOM_DATA_DIR=/app/data
