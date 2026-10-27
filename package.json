@@ -5,6 +5,9 @@
   "private": true,
   "license": "Unlicense",
   "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  },
   "scripts": {
     "dev": "tsx scripts/build.ts --watch",
     "build": "tsx scripts/build.ts",
